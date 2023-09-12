@@ -20,10 +20,11 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Cadastro">
                   <items>
-                        <Menu mnemonicParsing="false" text="Matéria Prima">
+                        <Menu mnemonicParsing="false" text="Insumos">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Barras" />
-                          <MenuItem fx:id="menuItemCategory" mnemonicParsing="false" onAction="#onMenuItemCategory" text="Categoria" />
+                              <MenuItem mnemonicParsing="false" text="Barra de aço" />
+                              <MenuItem mnemonicParsing="false" text="Chapa" />
+                              <MenuItem mnemonicParsing="false" text="Acessório" />
                           </items>
                         </Menu>
                   </items>
@@ -39,7 +40,7 @@
          <left>
             <VBox prefHeight="400.0" prefWidth="119.0" style="-fx-background-color: #3e5540;" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="131.0" style="-fx-background-color: #3e5540;" text="Matéria Prima" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="131.0" style="-fx-background-color: #3e5540;" text="Button" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></Button>
@@ -68,7 +69,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="131.0" style="-fx-background-color: #3e5540;" text="Sobre" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="131.0" style="-fx-background-color: #3e5540;" text="Button" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
