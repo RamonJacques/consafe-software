@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.consafe.application.gui.MainViewController">
    <content>
       <BorderPane>
          <center>
@@ -23,7 +23,7 @@
                         <Menu mnemonicParsing="false" text="Matéria Prima">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Barras" />
-                          <MenuItem mnemonicParsing="false" text="Categoria" />
+                          <MenuItem fx:id="menuItemCategory" mnemonicParsing="false" onAction="#onMenuItemCategory" text="Categoria" />
                           </items>
                         </Menu>
                   </items>

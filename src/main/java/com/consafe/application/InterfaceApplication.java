@@ -34,7 +34,7 @@ public class InterfaceApplication extends Application{
 	@Override
 	public void start(Stage stage) {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/consafe/application/gui/views/MainView.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/consafe/application/gui/MainView.fxml"));
 			ScrollPane scrollPane = fxmlLoader.load();
 			fxmlLoader.setControllerFactory(applicationContext::getBean);
 			
