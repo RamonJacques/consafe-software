@@ -21,7 +21,7 @@ public class InterfaceApplication extends Application{
 
 	@Override
 	public void init() {
-		applicationContext = new SpringApplicationBuilder(Application.class).run();
+		applicationContext = new SpringApplicationBuilder(CsfApplication.class).run();
 		applicationContext
 	    .getAutowireCapableBeanFactory()
 	    .autowireBeanProperties(
@@ -34,7 +34,7 @@ public class InterfaceApplication extends Application{
 	@Override
 	public void start(Stage stage) {
 		try {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/exercise/consafe/gui/MainView.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/consafe/application/gui/views/MainView.fxml"));
 			ScrollPane scrollPane = fxmlLoader.load();
 			fxmlLoader.setControllerFactory(applicationContext::getBean);
 			
@@ -43,7 +43,7 @@ public class InterfaceApplication extends Application{
 
 			mainScene = new Scene(scrollPane);
 			stage.setScene(mainScene);
-			stage.setTitle("Consafe application");
+			stage.setTitle("Consafe application.");
 			stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
