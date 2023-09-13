@@ -1,18 +1,28 @@
 package com.consafe.application.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import com.consafe.application.entities.enums.SteelBarCategory;
 
-public class SteelBar {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class SteelBar implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Integer id;
 	private String name;
 	private Double kgPerMeter;
 	private SteelBarCategory steelBarCategory;
 	
 
-	private SteelBar() {
+	public SteelBar() {
 	}
 
 	public SteelBar(Integer id, String name, Double kgPerMeter, SteelBarCategory steelBarCategory) {
