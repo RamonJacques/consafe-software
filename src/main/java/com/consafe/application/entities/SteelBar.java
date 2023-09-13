@@ -1,0 +1,79 @@
+package com.consafe.application.entities;
+
+import java.util.Objects;
+
+import com.consafe.application.entities.enums.SteelBarCategory;
+
+public class SteelBar {
+	
+	private Integer id;
+	private String name;
+	private Double kgPerMeter;
+	private SteelBarCategory steelBarCategory;
+	
+
+	private SteelBar() {
+	}
+
+	public SteelBar(Integer id, String name, Double kgPerMeter, SteelBarCategory steelBarCategory) {
+		this.id = id;
+		this.name = name;
+		this.kgPerMeter = kgPerMeter;
+		this.steelBarCategory = steelBarCategory;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getKgPerMeter() {
+		return kgPerMeter;
+	}
+
+	public void setKgPerMeter(Double kgPerMeter) {
+		this.kgPerMeter = kgPerMeter;
+	}
+
+	public SteelBarCategory getSteelBarCategory() {
+		return steelBarCategory;
+	}
+
+	public void setSteelBarCategory(SteelBarCategory steelBarCategory) {
+		this.steelBarCategory = steelBarCategory;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SteelBar other = (SteelBar) obj;
+		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String toString() {
+		return "SteelBar [id=" + id + ", name=" + name + ", kgPerMeter=" + kgPerMeter + ", steelBarCategory= "
+				+ steelBarCategory.toString() + "]";
+	}
+}
