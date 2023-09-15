@@ -20,7 +20,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-public class MainViewController implements Initializable{
+public class MainViewController implements Initializable {
 	
 	@FXML
 	private MenuItem menuItemSteelBar;
@@ -35,7 +35,7 @@ public class MainViewController implements Initializable{
 	public void onMenuItemSteelBar() {
 		setCenterView("/com/consafe/application/gui/SteelBarList.fxml", (SteelBarListController controller) -> {
 			controller.setSteelBarService(new SteelBarService());
-			//controller.updateTableView();
+			controller.updateTableView();
 			});
 	}
 	

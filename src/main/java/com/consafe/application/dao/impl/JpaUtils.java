@@ -9,7 +9,7 @@ public class JpaUtils {
 	
 	public static EntityManager getEntityManager() {
 		if (entityManagerFactory == null) {
-			entityManagerFactory = Persistence.createEntityManagerFactory("consafe-jpa");
+			entityManagerFactory = Persistence.createEntityManagerFactory("csf-jpa");
 		}
 		return entityManagerFactory.createEntityManager();
 	}

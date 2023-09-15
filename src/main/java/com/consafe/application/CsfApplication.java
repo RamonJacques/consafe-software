@@ -1,5 +1,6 @@
 package com.consafe.application;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
@@ -10,14 +11,19 @@ import com.consafe.application.services.SteelBarService;
 import javafx.application.Application;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
-public class CsfApplication {
+public class CsfApplication implements CommandLineRunner{
 			
 	public static void main(String[] args) {
 		Application.launch(InterfaceApplication.class, args);
 		
+
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
 		SteelBarService service = new SteelBarService();
 		
-		SteelBar mt1 = new SteelBar(1, "Metalon x40 x40 x3.0", 2.8, SteelBarCategory.FERRO_CHATO);
-		service.saveOrUpdate(mt1);
+		SteelBar tb1 = new SteelBar(null, "Tubo 4 x 2,75mm", 6.8, SteelBarCategory.TTUBO);
+		service.saveOrUpdate(tb1);		
 	}
 }

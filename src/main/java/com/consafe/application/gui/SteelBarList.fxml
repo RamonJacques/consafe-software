@@ -11,7 +11,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.consafe.application.gui.SteelBarListController">
    <children>
-      <Label text="Matéria Prima">
+      <Label text="Barra de aço">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

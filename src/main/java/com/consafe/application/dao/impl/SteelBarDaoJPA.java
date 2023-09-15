@@ -48,7 +48,7 @@ public class SteelBarDaoJPA implements SteelBarDao{
 	@Override
 	public List<SteelBar> findAll() {
 		EntityManager em = JpaUtils.getEntityManager();
-		List<SteelBar> list = em.createQuery("from MateriaPrima", SteelBar.class).getResultList();			
+		List<SteelBar> list = em.createQuery("from SteelBar", SteelBar.class).getResultList();			
 		em.close();			
 		return list;
 	}

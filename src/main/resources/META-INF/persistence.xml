@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="consafe-jpa"
+	<persistence-unit name="csf-jpa"
 		transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="jakarta.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/consafedb?useSSL=FALSE&amp;serverTimezone=UTC" />
+			<property name="jakarta.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/csfdatabase?useSSL=FALSE&amp;serverTimezone=UTC" />
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="jakarta.persistence.jdbc.user" value="root" />
 			<property name="jakarta.persistence.jdbc.password" value="" />
