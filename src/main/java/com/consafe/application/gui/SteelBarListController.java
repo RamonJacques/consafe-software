@@ -107,7 +107,7 @@ public class SteelBarListController implements Initializable, DataChangeListener
 //			controller.updateFormData();
 
 			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Selecione o tipo de barra.");
+			dialogStage.setTitle("Nova barra.");
 			dialogStage.setScene(new Scene(pane));
 			dialogStage.setResizable(false);
 			dialogStage.initOwner(parentStage);
