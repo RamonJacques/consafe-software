@@ -4,17 +4,18 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.consafe.application.entities.SteelBar;
 import com.consafe.application.entities.enums.SteelBarCategory;
 import com.consafe.application.gui.utils.Alerts;
+import com.consafe.application.gui.utils.Utils;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -28,9 +29,10 @@ public class SteelBarFormController implements Initializable {
 	private Button registerButton;
 
 	@FXML
-	public void onBtRegisterButton() {
+	public void onBtRegisterButton(ActionEvent event) {
 		String path = pathGenerator();
-		createDialogForm(path);
+		Stage parentStage = Utils.currentStage(event);
+		createDialogForm(path, parentStage);
 	}
 
 	@Override
@@ -43,7 +45,7 @@ public class SteelBarFormController implements Initializable {
 		comboBoxSteelBarCategory.getSelectionModel().selectFirst();
 	}
 	
-	private void createDialogForm(String absoluteName) {
+	private void createDialogForm(String absoluteName, Stage parentStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 			Pane pane = loader.load();
@@ -56,9 +58,10 @@ public class SteelBarFormController implements Initializable {
 //			controller.updateFormData();
 
 			Stage dialogStage = new Stage();
-			dialogStage.setTitle("Nova barra.");
+			dialogStage.setTitle("Nova barra");
 			dialogStage.setScene(new Scene(pane));
 			dialogStage.setResizable(false);
+			dialogStage.initOwner(parentStage);
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.showAndWait();
 

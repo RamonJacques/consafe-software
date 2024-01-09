@@ -23,7 +23,7 @@ public class CsfApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		SteelBarService service = new SteelBarService();
 		
-		SteelBar tb1 = new SteelBar(null, "Tubo 4 x 2,75mm", 6.8, SteelBarCategory.TTUBO);
+		SteelBar tb1 = new SteelBar(null, "Tubo 4 x 2,75mm", 6.8, SteelBarCategory.TUBO);
 		service.saveOrUpdate(tb1);		
 	}
 }

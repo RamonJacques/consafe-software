@@ -7,7 +7,8 @@ public enum SteelBarCategory {
 	FERRO_REDONDO("Ferro redondo"),
 	CANTONEIRA("Cantoneira"),
 	METALON("Metalon"),
-	TTUBO("Tubo");
+	TUBO("Tubo"),
+	PICA("Pica");
 	
 	private String description;
 	
